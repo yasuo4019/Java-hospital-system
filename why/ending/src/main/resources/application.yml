@@ -1,0 +1,33 @@
+server:
+  port: 9090
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: why4019
+    keyStoreType: PKCS12
+    keyAlias: springboot
+    trust-store: classpath:truststore.jks
+    trust-store-password: why4019
+
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=why;
+    username: sa
+    password: why4019.
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #//扫描所有的mybatis的xml文件
+#  configuration:
+#   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: C:/Users/11691/Desktop/why/guanlixitong/0411/WHY/why/files/
+
+
+
